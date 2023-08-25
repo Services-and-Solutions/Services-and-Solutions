@@ -605,6 +605,7 @@ section {
 
 .services .title {
   font-weight: 700;
+  margin-top: 12px;
   margin-bottom: 15px;
   font-size: 18px;
 }
