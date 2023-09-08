@@ -888,16 +888,21 @@
               <h4>Join Our Newsletter</h4>
               <p>
                 Stay Informed: Join Our Newsletter for Exclusive Updates and
-                Offers !
+                Offers!
               </p>
-              <form action="" method="post">
-                <input type="email" name="email" /><input
-                  type="submit"
-                  value="Subscribe"
-                />
+              <form id="newsletter-form" method="post">
+                <input type="email" name="email" id="email-input" />
+                <input type="submit" value="Subscribe" />
               </form>
             </div>
           </div>
+        </div>
+      </div>
+      <div id="custom-alert-overlay">
+        <div id="custom-alert">
+          <h2>Thank You!</h2>
+          <p>You have subscribed to our newsletter.</p>
+          <button id="close-alert">Close</button>
         </div>
       </div>
 
@@ -1019,6 +1024,7 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/newsletter/newsletter-form.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
