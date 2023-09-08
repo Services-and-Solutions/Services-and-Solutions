@@ -27,15 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // You can add your form submission logic here if needed
 
-      // Reset the form
-      newsletterForm.reset();
-
-      // Show the custom alert with fade-in effect
-      customAlertOverlay.style.opacity = "0";
-      customAlertOverlay.style.display = "flex";
-      setTimeout(() => {
-        customAlertOverlay.style.opacity = "1";
-      }, 10);
+      // Submit the form using AJAX
+      submitFormWithAjax();
     });
   }
 
@@ -52,6 +45,36 @@ document.addEventListener("DOMContentLoaded", function () {
       closeCustomAlert();
     }
   });
+
+  function submitFormWithAjax() {
+    const formData = new FormData(newsletterForm);
+
+    fetch(newsletterForm.action, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Form submission was successful
+          showCustomAlert();
+          newsletterForm.reset(); // Reset the form
+        } else {
+          // Handle errors or validation failures here
+          console.error("Form submission failed.");
+        }
+      })
+      .catch((error) => {
+        console.error("An error occurred:", error);
+      });
+  }
+
+  function showCustomAlert() {
+    customAlertOverlay.style.opacity = "0";
+    customAlertOverlay.style.display = "flex";
+    setTimeout(() => {
+      customAlertOverlay.style.opacity = "1";
+    }, 10);
+  }
 
   function closeCustomAlert() {
     customAlertOverlay.style.opacity = "0";
