@@ -493,7 +493,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background-color: #fef5f1;
+  background-color: #edf6f9;
   min-height: 40px;
 }
 
@@ -826,6 +826,31 @@ section {
   padding: 0;
 }
 
+.portfolio-wrapper {
+  padding-bottom: 90px;
+}
+
+.portfolio-divider {
+  position: relative;
+  margin-top: 90px;
+  height: 1px;
+}
+
+.portfolio-div-transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #014e55,
+    transparent
+  );
+}
 /*--------------------------------------------------------------
 # F.A.Q
 --------------------------------------------------------------*/
