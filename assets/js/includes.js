@@ -11,7 +11,7 @@ class MyHeader extends HTMLElement {
   
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="/index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="index.html#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
           <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
           <li>
